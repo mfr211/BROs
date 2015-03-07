@@ -1,5 +1,5 @@
 %% BMI Homework
-
+set(0,'DefaultFigureWindowStyle','docked');
 clc; clear all; close all;
 
 load('monkeydata_training.mat')
@@ -229,7 +229,6 @@ for k=1:length(trial(1,:)) % For all directions
         total_spikes(n)=sum(trial(n,k).spikes(i,1:300));
         average_trial_spike_rate(n)=total_spikes(n)/length(trial(n,k).spikes(i,1:300));
     end
-    
     
     average_spike_rate(k)=sum(average_trial_spike_rate)/length(average_trial_spike_rate);
     stdev(k)=std(average_trial_spike_rate/length(trial))
